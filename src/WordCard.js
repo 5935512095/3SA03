@@ -22,10 +22,10 @@ export default class WordCard extends
             attempt: '',
         }
     }
-    componentWillMount(){
+    componentWillMount() {
         let data = prepareStateFromWord(this.props.value);
         this.setState({
-            word:data.word,
+            word: data.word,
             chars: data.chars,
             attempt: data.attempt,
             guess: data.guess,
@@ -46,7 +46,7 @@ export default class WordCard extends
     render() {
         console.log(this.state);
         return (
-            <div>
+            <div className="test">
                 {this.state.chars.map((c, i) => <CharacterCard value={c} key={i} attempt={this.state.attempt}
                     activationHandler={this.activationHandler} />)}
             </div>
